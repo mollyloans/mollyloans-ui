@@ -9,6 +9,7 @@ export default function Home() {
           <a
             className="text-lg tracking-wider text-gray-400"
             href="https://mollyloans.gitbook.io/"
+            target="_blank"
           >
             {`=> To help understand how "liquid loans" work, check out our docs page <=`}
           </a>
