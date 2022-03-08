@@ -1,14 +1,22 @@
-import Head from 'next/head'
+import Layout from 'src/components/Layout'
+import PartnerCard from 'src/components/PartnerCard'
 
 export default function Home() {
   return (
-    <div className="container h-screen mx-auto">
-      <Head>
-        <title>Molly Loans</title>
-      </Head>
-      <div className="my-20 text-center">
-        <h1 className="mb-5 text-4xl font-bold">Molly Loans</h1>
+    <Layout>
+      <div className="container max-w-4xl py-6 mx-auto">
+        <div className="text-center">
+          <a className="text-lg tracking-wider text-gray-400" href="">
+            {`=> To help understand how "liquid loans" work, check out our docs page <=`}
+          </a>
+        </div>
+        <div className="grid max-w-xl gap-6 mx-auto my-10 md:my-20 md:grid-cols-2">
+          <PartnerCard />
+          <PartnerCard />
+          <PartnerCard />
+          <PartnerCard />
+        </div>
       </div>
-    </div>
+    </Layout>
   )
 }
