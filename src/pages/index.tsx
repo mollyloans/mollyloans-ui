@@ -6,7 +6,10 @@ export default function Home() {
     <Layout>
       <div className="container max-w-4xl px-3 py-6 mx-auto md:px-0">
         <div className="text-center">
-          <a className="text-lg tracking-wider text-gray-400" href="">
+          <a
+            className="text-lg tracking-wider text-gray-400"
+            href="https://mollyloans.gitbook.io/"
+          >
             {`=> To help understand how "liquid loans" work, check out our docs page <=`}
           </a>
         </div>
