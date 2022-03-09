@@ -1,5 +1,6 @@
 import Layout from 'src/components/Layout'
 import PartnerCard from 'src/components/PartnerCard'
+import { MOLLY_DOCS_URL } from 'src/utils/constants'
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
         <div className="text-center">
           <a
             className="text-lg tracking-wider text-gray-400"
-            href="https://mollyloans.gitbook.io/"
+            href={MOLLY_DOCS_URL}
             target="_blank"
           >
             {`=> To help understand how "liquid loans" work, check out our docs page <=`}

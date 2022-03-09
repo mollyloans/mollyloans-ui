@@ -57,7 +57,12 @@ const WalletSelector = ({ onClose }: { onClose: () => void }) => {
           >
             <span className="flex items-center justify-between w-full">
               <span className="inline-flex items-center space-x-2">
-                <img src={getWalletLogo(x.name)} className="w-6 h-6" alt="" />
+                <img
+                  src={getWalletLogo(x.name)}
+                  draggable={false}
+                  className="w-6 h-6"
+                  alt=""
+                />
                 <span>
                   {mounted ? x.name : x.id === 'injected' ? x.id : x.name}
                 </span>
