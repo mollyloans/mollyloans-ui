@@ -9,7 +9,7 @@ const Layout = ({ children }: { children: React.ReactElement }) => {
         <title>Molly Loans</title>
       </Head>
       <Header />
-      <div>{children}</div>
+      <div className="overflow-y-auto">{children}</div>
     </div>
   )
 }

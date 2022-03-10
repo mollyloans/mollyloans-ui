@@ -1,4 +1,6 @@
+import Link from 'next/link'
 import React from 'react'
+import { LOAN } from 'src/utils/paths'
 
 const PartnerCard = () => {
   return (
@@ -16,6 +18,7 @@ const PartnerCard = () => {
           <img
             src="/static/usdc.svg"
             className="w-4 h-4 ml-2 rounded-full"
+            draggable={false}
             alt=""
           />
         </span>
@@ -28,9 +31,11 @@ const PartnerCard = () => {
           Raise ends in 47h:23m
         </span>
       </div>
-      <button className="w-full p-2 text-lg text-white bg-black rounded-xl">
-        Loan to CHEWY
-      </button>
+      <Link href={`${LOAN}/cwy`} passHref>
+        <button className="w-full p-2 text-lg text-white bg-black rounded-xl">
+          Loan to CHEWY
+        </button>
+      </Link>
     </div>
   )
 }

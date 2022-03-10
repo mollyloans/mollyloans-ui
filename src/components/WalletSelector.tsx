@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import CopyToClipboard from 'react-copy-to-clipboard'
+import toast from 'react-hot-toast'
 import { getWalletLogo } from 'src/utils/helpers'
 import { Connector, useAccount, useConnect, useNetwork } from 'wagmi'
 
@@ -31,23 +33,26 @@ const WalletSelector = ({ onClose }: { onClose: () => void }) => {
       {isConnected && (
         <div className="w-full p-4 space-y-2 border border-gray-600 rounded-lg">
           <div className="flex items-center justify-between">
-            <h6 className="text-sm text-gray-400">
-              Connected with {connector?.name}
-            </h6>
-            <span className="inline-block px-2 py-1 text-xs bg-gray-100 rounded-lg">
+            <h6 className="text-gray-500">Connected with {connector?.name}</h6>
+            <span className="inline-block px-3 bg-gray-100 rounded-lg">
               {networkData.chain?.name || 'unknown'}
             </span>
           </div>
-          <h6 className="font-mono truncate cursor-pointer select-all">
-            {accountData?.address}
-          </h6>
+          <CopyToClipboard
+            text={accountData?.address}
+            onCopy={() => toast.success('Address copied')}
+          >
+            <h6 className="text-xl tracking-wider truncate cursor-pointer select-all">
+              {accountData?.address}
+            </h6>
+          </CopyToClipboard>
         </div>
       )}
       {connectors.map((x, i) => {
         return (
           <button
             key={i}
-            className={`w-full flex items-center justify-center bg-gray-50 px-4 py-3 overflow-hidden border-2 border-transparent outline-none rounded-lg border-gray-700
+            className={`w-full flex items-center justify-center bg-gray-50 px-4 py-2 overflow-hidden border-2 border-transparent outline-none rounded-lg border-gray-700
             ${x.id !== accountData?.connector?.id && 'hover:bg-gray-100'}
             `}
             onClick={() => onConnect(x)}
@@ -63,9 +68,9 @@ const WalletSelector = ({ onClose }: { onClose: () => void }) => {
                   className="w-6 h-6"
                   alt=""
                 />
-                <span>
+                <h6 className="text-lg tracking-wider">
                   {mounted ? x.name : x.id === 'injected' ? x.id : x.name}
-                </span>
+                </h6>
               </span>
               {mounted ? !x.ready && ' (unsupported)' : ''}
               {loading && x.name === connector?.name && <Spinner />}

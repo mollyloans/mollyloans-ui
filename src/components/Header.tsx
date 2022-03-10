@@ -3,6 +3,8 @@ import WalletModal from './WalletModal'
 import { useAccount, useNetwork } from 'wagmi'
 import { shortenAddress } from 'src/utils/helpers'
 import clsx from 'clsx'
+import { CopyToClipboard } from 'react-copy-to-clipboard'
+import toast from 'react-hot-toast'
 
 const Header = () => {
   const [showWalletModal, setShowWalletModal] = useState(false)
@@ -12,7 +14,14 @@ const Header = () => {
 
   return (
     <div className="sticky top-0 flex items-center justify-between w-full p-3 bg-white md:p-5">
-      <h1 className="text-xl font-bold md:text-4xl xl:text-5xl">Molly.loans</h1>
+      <span className="">
+        <img
+          src="/static/logo.svg"
+          alt=""
+          draggable={false}
+          className="hidden h-6 md:block"
+        />
+      </span>
       <div className="hidden text-2xl md:space-x-6 md:block">
         <a href="" className="text-indigo-700">
           Liquid loan
@@ -65,9 +74,14 @@ const Header = () => {
           )}
         </button>
         {accountData?.address && (
-          <span className="px-4 py-1">
-            {shortenAddress(accountData?.address)}
-          </span>
+          <CopyToClipboard
+            text={accountData.address}
+            onCopy={() => toast.success('Address copied')}
+          >
+            <span className="px-4 py-1">
+              {shortenAddress(accountData.address)}
+            </span>
+          </CopyToClipboard>
         )}
         <WalletModal
           show={showWalletModal}
