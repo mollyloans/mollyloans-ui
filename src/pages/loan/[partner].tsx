@@ -4,10 +4,10 @@ import Layout from 'src/components/Layout'
 const LoanPage = () => {
   return (
     <Layout>
-      <div className="max-w-3xl mx-auto my-10 md:my-20">
+      <div className="max-w-3xl mx-auto my-10">
         <div className="flex space-x-4">
           <div className="flex flex-col w-3/4 space-y-4">
-            <div className="p-2 w-full bg-[#ffeaf4] rounded-lg">
+            <div className="p-2 px-4 w-full bg-[#ffeaf4] rounded-lg">
               <div className="inline-flex items-start justify-start space-x-3">
                 <span className="p-1 bg-white rounded-lg">
                   <img
@@ -39,12 +39,14 @@ const LoanPage = () => {
                 </span>
               </div>
             </div>
-            <div className="w-full p-2 bg-gray-100 rounded-lg">
+            <div className="w-full p-2 px-4 bg-gray-100 rounded-lg">
               <h6 className="text-2xl">Deposit funds</h6>
-              <p className="text-gray-500">Maximum amount to loan:</p>
-              <h6 className="text-lg text-gray-500">153,440 USDC</h6>
+              <p className="text-[19px] text-gray-500">
+                Maximum amount to loan:
+              </p>
+              <h6 className="text-[19px] text-gray-500">153,440 USDC</h6>
               <div className="mt-1 mb-3">
-                <label className="mb-1" htmlFor="amount">
+                <label className="mb-1 text-[19px]" htmlFor="amount">
                   Available: 0 USDC
                 </label>
                 <div className="flex items-center">
@@ -52,25 +54,25 @@ const LoanPage = () => {
                     id="amount"
                     type="number"
                     placeholder="0.0"
-                    className="w-full py-0.5 px-2 text-xl rounded-l-lg outline-none border-2 border-r-0 border-gray-200"
+                    className="w-full px-2 py-1 text-xl border-2 border-r-0 border-gray-200 rounded-l-lg outline-none"
                   />
-                  <button className="px-2 py-1 bg-white border-2 border-l-0 border-gray-200 rounded-r-lg focus:outline-none">
+                  <button className="text-[19px] px-2 py-1 bg-white border-2 border-l-0 border-gray-200 rounded-r-lg focus:outline-none">
                     max
                   </button>
                 </div>
               </div>
               <div className="flex items-center space-x-2">
-                <button className="w-full py-0.5 text-lg text-white bg-black rounded-lg">
+                <button className="w-full py-0.5 text-lg text-white bg-black rounded-lg border-2 focus:outline-none border-black">
                   Approve
                 </button>
-                <button className="w-full py-0.5 text-lg text-gray-400 rounded-lg bg-gray-50 ring focus:outline-none ring-gray-200">
+                <button className="w-full py-0.5 text-lg text-gray-400 rounded-lg bg-gray-50 border-2 focus:outline-none border-gray-200">
                   Deposit
                 </button>
               </div>
             </div>
             <div className="p-2 px-4 bg-white border rounded-lg shadow border-gray-50">
               <h6 className="text-2xl">Loan interest</h6>
-              <span className="flex items-center text-xl font-semibold tracking-wider md:text-3xl text-violet-700">
+              <span className="flex items-center text-xl tracking-wider md:text-3xl text-[#6200f8]">
                 20% APY
               </span>
               <p className="text-lg text-gray-500">
@@ -94,7 +96,9 @@ const LoanPage = () => {
                   draggable={false}
                 />
               </span>
-              <span className="text-gray-400">Contract (Moonbeam)</span>
+              <span className="text-[19px] text-gray-400">
+                Contract (Moonbeam)
+              </span>
             </div>
             <div className="p-2 px-4 bg-[#ffeaf4] rounded-lg">
               <h6 className="text-2xl">Raise info</h6>
@@ -109,7 +113,7 @@ const LoanPage = () => {
               <h6 className="mb-2 text-2xl">
                 Lockup<span className="ml-2 text-gray-400">(12 Months)</span>
               </h6>
-              <div className="space-y-4 text-gray-500">
+              <div className="space-y-4 text-[19px] text-gray-500">
                 <p>Tokens are subject to the 12 months lockup period.</p>
                 <p>
                   After depositing, you'll receive receipt tokens for each USDC

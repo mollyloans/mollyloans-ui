@@ -5,6 +5,8 @@ import { shortenAddress } from 'src/utils/helpers'
 import clsx from 'clsx'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import toast from 'react-hot-toast'
+import Link from 'next/link'
+import { HOME } from 'src/utils/paths'
 
 const Header = () => {
   const [showWalletModal, setShowWalletModal] = useState(false)
@@ -14,16 +16,18 @@ const Header = () => {
 
   return (
     <div className="sticky top-0 flex items-center justify-between w-full p-3 bg-white md:p-5">
-      <span className="">
-        <img
-          src="/static/logo.svg"
-          alt=""
-          draggable={false}
-          className="hidden h-6 md:block"
-        />
-      </span>
+      <Link href={HOME}>
+        <a>
+          <img
+            src="/static/logo.svg"
+            alt=""
+            draggable={false}
+            className="hidden h-8 md:block"
+          />
+        </a>
+      </Link>
       <div className="hidden text-2xl md:space-x-6 md:block">
-        <a href="" className="text-indigo-700">
+        <a href="" className="text-[#6200f8]">
           Liquid loan
         </a>
         <a href="" className="text-gray-400">
