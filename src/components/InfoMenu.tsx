@@ -137,7 +137,7 @@ const InfoMenu = () => {
                 target="_blank"
                 className={`group hover:text-black flex rounded justify-between items-center w-full px-2 py-1`}
               >
-                <span>Github</span>
+                <span>Twitter</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-4 h-4"
