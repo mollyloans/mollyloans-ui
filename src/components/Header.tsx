@@ -7,6 +7,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
 import toast from 'react-hot-toast'
 import Link from 'next/link'
 import { HOME } from 'src/utils/paths'
+import InfoMenu from './InfoMenu'
 
 const Header = () => {
   const [showWalletModal, setShowWalletModal] = useState(false)
@@ -42,7 +43,7 @@ const Header = () => {
               : setShowWalletModal(true)
           }
           className={clsx(
-            'inline-flex items-center justify-between px-2 py-1 space-x-2 bg-gray-200 rounded-lg',
+            'inline-flex items-center border-2 border-gray-200 justify-between px-2 py-1 space-x-2 bg-gray-200 rounded-lg',
             {
               'bg-red-300': network.chain?.unsupported && switchNetwork
             }
@@ -82,11 +83,14 @@ const Header = () => {
             text={accountData.address}
             onCopy={() => toast.success('Address copied')}
           >
-            <span className="px-4 py-1">
+            <span className="px-4 py-1 ml-2 border-2 border-gray-200 rounded-lg">
               {shortenAddress(accountData.address)}
             </span>
           </CopyToClipboard>
         )}
+        <span className="ml-2">
+          <InfoMenu />
+        </span>
         <WalletModal
           show={showWalletModal}
           onClose={() => setShowWalletModal(false)}
