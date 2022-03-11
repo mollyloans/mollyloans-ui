@@ -87,7 +87,7 @@ const LoanPage = () => {
           <div className="w-2/4 space-y-4">
             <div className="p-2 px-4 bg-white border rounded-lg shadow border-gray-50">
               <h6 className="text-2xl">Loaning asset:</h6>
-              <span className="flex items-center tracking-wider">
+              <span className="flex text-[19px] items-center tracking-wider">
                 USDC
                 <img
                   src="/static/usdc.svg"
