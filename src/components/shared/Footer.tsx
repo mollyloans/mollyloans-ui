@@ -20,6 +20,7 @@ const Footer = () => {
                   src="/static/discord-gray-icon.svg"
                   className="w-6 h-6"
                   alt=""
+                  draggable={false}
                 />
               </a>
             </Link>
@@ -29,6 +30,7 @@ const Footer = () => {
               <a target="_blank" rel="noreferrer">
                 <img
                   src="/static/twitter-gray-icon.svg"
+                  draggable={false}
                   className="w-6 h-6"
                   alt=""
                 />
@@ -39,6 +41,7 @@ const Footer = () => {
             <Link href={MOLLY_GITHUB_URL}>
               <a target="_blank" rel="noreferrer">
                 <img
+                  draggable={false}
                   src="/static/github-gray-icon.svg"
                   className="w-6 h-6"
                   alt=""
