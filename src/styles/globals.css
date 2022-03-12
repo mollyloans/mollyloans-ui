@@ -17,3 +17,7 @@ body {
   @apply font-sans scroll-smooth min-h-screen;
   font-family: 'VT323', 'system-ui', monospace;
 }
+
+.primary-outline {
+  @apply border-2 border-gray-200 rounded-lg;
+}

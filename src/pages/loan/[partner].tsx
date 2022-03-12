@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from 'src/components/Layout'
+import Layout from 'src/components/shared/Layout'
 
 const LoanPage = () => {
   return (
@@ -65,7 +65,7 @@ const LoanPage = () => {
                 <button className="w-full py-0.5 text-lg text-white bg-black rounded-lg border-2 focus:outline-none border-black">
                   Approve
                 </button>
-                <button className="w-full py-0.5 text-lg text-gray-400 rounded-lg bg-gray-50 border-2 focus:outline-none border-gray-200">
+                <button className="w-full py-0.5 text-lg text-gray-400 primary-outline bg-gray-50 focus:outline-none">
                   Deposit
                 </button>
               </div>

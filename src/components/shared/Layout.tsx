@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import React from 'react'
+import Footer from './Footer'
 import Header from './Header'
 
 const Layout = ({ children }: { children: React.ReactElement }) => {
@@ -10,6 +11,7 @@ const Layout = ({ children }: { children: React.ReactElement }) => {
       </Head>
       <Header />
       <div className="overflow-y-auto">{children}</div>
+      <Footer />
     </div>
   )
 }

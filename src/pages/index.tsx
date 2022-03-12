@@ -1,4 +1,4 @@
-import Layout from 'src/components/Layout'
+import Layout from 'src/components/shared/Layout'
 import PartnerCard from 'src/components/PartnerCard'
 import { MOLLY_DOCS_URL } from 'src/utils/constants'
 

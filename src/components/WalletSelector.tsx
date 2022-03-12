@@ -3,8 +3,10 @@ import CopyToClipboard from 'react-copy-to-clipboard'
 import toast from 'react-hot-toast'
 import { getWalletLogo } from 'src/utils/helpers'
 import { Connector, useAccount, useConnect, useNetwork } from 'wagmi'
+import InfoIcon from './icons/InfoIcon'
+import TickIcon from './icons/TickIcon'
 
-import { Spinner } from './Spinner'
+import { Spinner } from './ui/Spinner'
 
 const WalletSelector = ({ onClose }: { onClose: () => void }) => {
   const [mounted, setMounted] = useState(false)
@@ -74,42 +76,14 @@ const WalletSelector = ({ onClose }: { onClose: () => void }) => {
               </span>
               {mounted ? !x.ready && ' (unsupported)' : ''}
               {loading && x.name === connector?.name && <Spinner />}
-              {!loading && x.id === accountData?.connector?.id && (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-5 h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-              )}
+              {!loading && x.id === accountData?.connector?.id && <TickIcon />}
             </span>
           </button>
         )
       })}
       {error?.message ? (
         <div className="flex items-center py-2 text-red-500">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-5 h-5 mr-2"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
+          <InfoIcon className="mr-2" />
           {error?.message ?? 'Failed to connect'}
         </div>
       ) : null}

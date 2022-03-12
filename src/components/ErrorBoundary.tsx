@@ -22,7 +22,7 @@ class ErrorBoundary extends React.Component {
       return (
         <div className="flex flex-col items-center justify-start h-full mt-10 md:mt-20">
           <img
-            src="/logo.svg"
+            src="/mollylogo.svg"
             alt="logo"
             draggable={false}
             height={100}
