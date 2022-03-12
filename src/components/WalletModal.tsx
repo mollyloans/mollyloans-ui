@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import React from 'react'
-import { CloseIcon } from './icons/CloseIcon'
 
+import { CloseIcon } from './icons/CloseIcon'
 import WalletSelector from './WalletSelector'
 
 interface Props {

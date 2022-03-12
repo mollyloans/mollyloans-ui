@@ -1,5 +1,5 @@
-import Layout from 'src/components/shared/Layout'
 import PartnerCard from 'src/components/PartnerCard'
+import Layout from 'src/components/shared/Layout'
 import { MOLLY_DOCS_URL } from 'src/utils/constants'
 
 export default function Home() {
@@ -11,6 +11,7 @@ export default function Home() {
             className="text-lg tracking-wider text-gray-400"
             href={MOLLY_DOCS_URL}
             target="_blank"
+            rel="noreferrer"
           >
             {`=> To help understand how "liquid loans" work, check out our docs page <=`}
           </a>

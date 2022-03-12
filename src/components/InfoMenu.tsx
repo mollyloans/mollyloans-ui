@@ -1,5 +1,6 @@
-import React from 'react'
 import { Menu } from '@headlessui/react'
+import Link from 'next/link'
+import React from 'react'
 import {
   MOLLY_BLOG_URL,
   MOLLY_DISCORD_URL,
@@ -7,9 +8,9 @@ import {
   MOLLY_GITHUB_URL,
   MOLLY_TWITTER_URL
 } from 'src/utils/constants'
-import Link from 'next/link'
-import InfoIcon from './icons/InfoIcon'
+
 import HamburgurIcon from './icons/HamburgurIcon'
+import InfoIcon from './icons/InfoIcon'
 
 const LINKS = [
   {

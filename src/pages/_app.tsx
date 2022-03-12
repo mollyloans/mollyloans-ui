@@ -1,12 +1,12 @@
 import '../styles/globals.css'
 
+import { providers } from 'ethers'
 import type { AppProps } from 'next/app'
+import { Toaster } from 'react-hot-toast'
+import ErrorBoundary from 'src/components/ErrorBoundary'
 import { Provider } from 'wagmi'
 import { InjectedConnector } from 'wagmi/connectors/injected'
 import { WalletConnectConnector } from 'wagmi/connectors/walletConnect'
-import { providers } from 'ethers'
-import ErrorBoundary from 'src/components/ErrorBoundary'
-import { Toaster } from 'react-hot-toast'
 
 const rpcUrl = process.env.NEXT_PUBLIC_RPC_URL as string
 

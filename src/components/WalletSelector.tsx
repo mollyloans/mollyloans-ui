@@ -3,9 +3,9 @@ import CopyToClipboard from 'react-copy-to-clipboard'
 import toast from 'react-hot-toast'
 import { getWalletLogo } from 'src/utils/helpers'
 import { Connector, useAccount, useConnect, useNetwork } from 'wagmi'
+
 import InfoIcon from './icons/InfoIcon'
 import TickIcon from './icons/TickIcon'
-
 import { Spinner } from './ui/Spinner'
 
 const WalletSelector = ({ onClose }: { onClose: () => void }) => {

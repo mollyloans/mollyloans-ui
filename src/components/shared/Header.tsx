@@ -1,14 +1,15 @@
-import React, { useState } from 'react'
-import WalletModal from '../WalletModal'
-import { useAccount, useNetwork } from 'wagmi'
-import { shortenAddress } from 'src/utils/helpers'
 import clsx from 'clsx'
+import Link from 'next/link'
+import React, { useState } from 'react'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import toast from 'react-hot-toast'
-import Link from 'next/link'
+import { shortenAddress } from 'src/utils/helpers'
 import { HOME } from 'src/utils/paths'
-import InfoMenu from '../InfoMenu'
+import { useAccount, useNetwork } from 'wagmi'
+
 import ChevronDown from '../icons/ChevronDown'
+import InfoMenu from '../InfoMenu'
+import WalletModal from '../WalletModal'
 
 const Header = () => {
   const [showWalletModal, setShowWalletModal] = useState(false)
