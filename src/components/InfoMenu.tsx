@@ -10,33 +10,67 @@ import {
 } from 'src/utils/constants'
 
 import HamburgurIcon from './icons/HamburgurIcon'
-import InfoIcon from './icons/InfoIcon'
 
 const LINKS = [
   {
     name: 'Docs',
     href: MOLLY_DOCS_URL,
-    icon: <InfoIcon />
+    icon: (
+      <img
+        src="/static/menu/docs.svg"
+        alt=""
+        draggable={false}
+        className="w-4 h-4"
+      />
+    )
   },
   {
     name: 'Blog',
     href: MOLLY_BLOG_URL,
-    icon: <InfoIcon />
+    icon: (
+      <img
+        src="/static/menu/blog.svg"
+        alt=""
+        draggable={false}
+        className="w-4 h-4"
+      />
+    )
   },
   {
     name: 'Discord',
     href: MOLLY_DISCORD_URL,
-    icon: <InfoIcon />
+    icon: (
+      <img
+        src="/static/menu/discord.svg"
+        alt=""
+        draggable={false}
+        className="w-4 h-4"
+      />
+    )
   },
   {
     name: 'Github',
     href: MOLLY_GITHUB_URL,
-    icon: <InfoIcon />
+    icon: (
+      <img
+        src="/static/menu/github.svg"
+        alt=""
+        draggable={false}
+        className="w-4 h-4"
+      />
+    )
   },
   {
     name: 'Twitter',
     href: MOLLY_TWITTER_URL,
-    icon: <InfoIcon />
+    icon: (
+      <img
+        src="/static/menu/twitter.svg"
+        alt=""
+        draggable={false}
+        className="w-4 h-4"
+      />
+    )
   }
 ]
 
