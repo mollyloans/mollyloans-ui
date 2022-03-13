@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import React, { useState } from 'react'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import toast from 'react-hot-toast'
+import { SUPPORTED_CHAIN_ID, SUPPORTED_CHAIN_NAME } from 'src/utils/constants'
 import { shortenAddress } from 'src/utils/helpers'
 import { HOME, SUBMIT } from 'src/utils/paths'
 import { useAccount, useNetwork } from 'wagmi'
@@ -21,9 +22,11 @@ const Header = () => {
 
   const switchToNetwork = async () => {
     if (switchNetwork) {
-      let data = await switchNetwork(1287)
+      let data = await switchNetwork(SUPPORTED_CHAIN_ID)
       if (data.error) {
-        toast.error(`${data.error.message}, please add chain to wallet.`)
+        toast.error(
+          `${data.error.message}, please add ${SUPPORTED_CHAIN_NAME} alpha network to wallet.`
+        )
       }
     }
   }

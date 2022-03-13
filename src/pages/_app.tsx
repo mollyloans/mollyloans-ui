@@ -4,6 +4,7 @@ import { providers } from 'ethers'
 import type { AppProps } from 'next/app'
 import { Toaster } from 'react-hot-toast'
 import ErrorBoundary from 'src/components/ErrorBoundary'
+import { SUPPORTED_CHAIN_ID, SUPPORTED_CHAIN_NAME } from 'src/utils/constants'
 import { Provider } from 'wagmi'
 import { InjectedConnector } from 'wagmi/connectors/injected'
 import { WalletConnectConnector } from 'wagmi/connectors/walletConnect'
@@ -12,8 +13,8 @@ const rpcUrl = process.env.NEXT_PUBLIC_RPC_URL as string
 
 const supportedChains = [
   {
-    id: 1287,
-    name: 'Moonbeam Alpha',
+    id: SUPPORTED_CHAIN_ID,
+    name: SUPPORTED_CHAIN_NAME,
     // nativeCurrency: { name: 'Dev', symbol: 'DEV', decimal: 18 },
     rpcUrls: [rpcUrl],
     blockExplorers: [
@@ -29,7 +30,7 @@ const connectors = () => {
     new WalletConnectConnector({
       options: {
         rpc: {
-          1287: rpcUrl
+          [SUPPORTED_CHAIN_ID]: rpcUrl
         },
         qrcode: true
       }
@@ -39,8 +40,8 @@ const connectors = () => {
 
 const provider = () =>
   new providers.StaticJsonRpcProvider(rpcUrl, {
-    chainId: 1287,
-    name: 'moonbase-alphanet'
+    chainId: SUPPORTED_CHAIN_ID,
+    name: SUPPORTED_CHAIN_NAME
   })
 
 function MyApp({ Component, pageProps }: AppProps) {
