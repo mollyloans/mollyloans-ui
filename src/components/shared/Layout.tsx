@@ -11,8 +11,10 @@ const Layout = ({ children }: { children: React.ReactElement }) => {
         <title>Molly Loans</title>
       </Head>
       <Header />
-      <div className="overflow-y-auto">{children}</div>
-      <Footer />
+      <div className="flex flex-col justify-between h-full">
+        <div className="mt-20">{children}</div>
+        <Footer />
+      </div>
     </div>
   )
 }

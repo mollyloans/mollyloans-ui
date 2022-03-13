@@ -14,7 +14,7 @@
 }
 
 body {
-  @apply font-sans scroll-smooth min-h-screen;
+  @apply font-sans scroll-smooth min-h-screen overflow-y-auto;
   font-family: 'VT323', 'system-ui', monospace;
 }
 
