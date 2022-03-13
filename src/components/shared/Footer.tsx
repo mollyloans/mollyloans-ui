@@ -18,7 +18,7 @@ const Footer = () => {
               <a target="_blank" rel="noreferrer">
                 <img
                   src="/static/discord-gray-icon.svg"
-                  className="w-6 h-6"
+                  className="h-7"
                   alt=""
                   draggable={false}
                 />
@@ -31,7 +31,7 @@ const Footer = () => {
                 <img
                   src="/static/twitter-gray-icon.svg"
                   draggable={false}
-                  className="w-6 h-6"
+                  className="h-7"
                   alt=""
                 />
               </a>
@@ -43,7 +43,7 @@ const Footer = () => {
                 <img
                   draggable={false}
                   src="/static/github-gray-icon.svg"
-                  className="w-6 h-6"
+                  className="h-8"
                   alt=""
                 />
               </a>
