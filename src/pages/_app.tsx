@@ -4,33 +4,26 @@ import { providers } from 'ethers'
 import type { AppProps } from 'next/app'
 import { Toaster } from 'react-hot-toast'
 import ErrorBoundary from 'src/components/ErrorBoundary'
-import { SUPPORTED_CHAIN_ID, SUPPORTED_CHAIN_NAME } from 'src/utils/constants'
+import {
+  DEFAULT_CHAIN_ID,
+  DEFAULT_CHAIN_NAME,
+  SUPPORTED_NETWORKS
+} from 'src/utils/constants'
+import { getNetworkRpc } from 'src/utils/helpers'
 import { Provider } from 'wagmi'
 import { InjectedConnector } from 'wagmi/connectors/injected'
 import { WalletConnectConnector } from 'wagmi/connectors/walletConnect'
 
 const rpcUrl = process.env.NEXT_PUBLIC_RPC_URL as string
 
-const supportedChains = [
-  {
-    id: SUPPORTED_CHAIN_ID,
-    name: SUPPORTED_CHAIN_NAME,
-    // nativeCurrency: { name: 'Dev', symbol: 'DEV', decimal: 18 },
-    rpcUrls: [rpcUrl],
-    blockExplorers: [
-      { name: 'Moonscan', url: 'https://moonbeam.moonscan.io/' }
-    ],
-    testnet: true
-  }
-]
-
 const connectors = () => {
   return [
-    new InjectedConnector({ chains: supportedChains }),
+    new InjectedConnector({ chains: SUPPORTED_NETWORKS }),
     new WalletConnectConnector({
       options: {
         rpc: {
-          [SUPPORTED_CHAIN_ID]: rpcUrl
+          1287: getNetworkRpc(1287),
+          250: getNetworkRpc(250)
         },
         qrcode: true
       }
@@ -40,8 +33,8 @@ const connectors = () => {
 
 const provider = () =>
   new providers.StaticJsonRpcProvider(rpcUrl, {
-    chainId: SUPPORTED_CHAIN_ID,
-    name: SUPPORTED_CHAIN_NAME
+    chainId: DEFAULT_CHAIN_ID,
+    name: DEFAULT_CHAIN_NAME
   })
 
 function MyApp({ Component, pageProps }: AppProps) {

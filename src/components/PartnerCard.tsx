@@ -32,7 +32,7 @@ const PartnerCard = () => {
         </span>
       </div>
       <Link href={`${LOAN}/cwy`} passHref>
-        <button className="w-full p-2 text-lg text-white bg-black rounded-xl">
+        <button className="w-full p-2 text-lg text-white bg-black hover:bg-gray-400 rounded-xl">
           Loan to CHEWY
         </button>
       </Link>

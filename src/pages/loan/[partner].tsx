@@ -20,8 +20,8 @@ const LoanPage = () => {
                   <h6 className="text-2xl">Loan issuer - Chewy</h6>
                 </div>
               </div>
-              <div className="flex items-center space-x-3">
-                <span className="flex items-center text-lg">
+              <div className="flex items-center space-x-3 text-[19px]">
+                <span className="flex items-center">
                   Twitter
                   <img
                     src="/static/twitter-icon.svg"
@@ -29,7 +29,7 @@ const LoanPage = () => {
                     alt=""
                   />
                 </span>
-                <span className="flex items-center text-lg">
+                <span className="flex items-center">
                   Website
                   <img
                     src="/static/website-icon.svg"
@@ -62,7 +62,7 @@ const LoanPage = () => {
                 </div>
               </div>
               <div className="flex items-center space-x-2">
-                <button className="w-full py-0.5 text-lg text-white bg-black rounded-lg border-2 focus:outline-none border-black">
+                <button className="w-full hover:bg-gray-400 hover:border-gray-400 py-0.5 text-lg text-white bg-black rounded-lg border-2 focus:outline-none border-black">
                   Approve
                 </button>
                 <button className="w-full py-0.5 text-lg text-gray-400 primary-outline bg-gray-50 focus:outline-none">
@@ -70,22 +70,22 @@ const LoanPage = () => {
                 </button>
               </div>
             </div>
-            <div className="p-2 px-4 bg-white border rounded-lg shadow border-gray-50">
+            <div className="p-2 px-4 bg-white border rounded-lg shadow-custom border-gray-50">
               <h6 className="text-2xl">Loan interest</h6>
               <span className="flex items-center text-xl tracking-wider md:text-3xl text-[#6200f8]">
                 20% APY
               </span>
-              <p className="text-lg text-gray-500">
+              <p className="text-[19px] text-gray-500">
                 1 USDC = 1 receipt chewyUSDCs1
               </p>
-              <p className="text-lg text-gray-500">
+              <p className="text-[19px] text-gray-500">
                 1 chewyUSDCs1 = 1.2 USDC after loan
               </p>
-              <p className="text-lg text-gray-500">expiry (In 12 months)</p>
+              <p className="text-[19px] text-gray-500">expiry (In 12 months)</p>
             </div>
           </div>
           <div className="w-2/4 space-y-4">
-            <div className="p-2 px-4 bg-white border rounded-lg shadow border-gray-50">
+            <div className="p-2 px-4 bg-white border rounded-lg shadow-custom border-gray-50">
               <h6 className="text-2xl">Loaning asset:</h6>
               <span className="flex text-[19px] items-center tracking-wider">
                 USDC
@@ -102,9 +102,11 @@ const LoanPage = () => {
             </div>
             <div className="p-2 px-4 bg-[#ffeaf4] rounded-lg">
               <h6 className="text-2xl">Raise info</h6>
-              <p className="text-lg text-gray-500">Raise cap 1,000,000 USDC</p>
-              <p className="text-lg text-gray-500">Raised 847,560 USDC</p>
-              <p className="text-lg text-gray-500">
+              <p className="text-[19px] text-gray-500">
+                Raise cap 1,000,000 USDC
+              </p>
+              <p className="text-[19px] text-gray-500">Raised 847,560 USDC</p>
+              <p className="text-[19px] text-gray-500">
                 153,440 USDC left for raise
               </p>
               <h6 className="text-2xl text-red-400">Raise end in 12h: 57m</h6>
