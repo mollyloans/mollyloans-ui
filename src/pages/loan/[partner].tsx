@@ -5,40 +5,57 @@ const LoanPage = () => {
   return (
     <Layout>
       <div className="max-w-3xl mx-auto my-10">
-        <div className="flex space-x-4">
-          <div className="flex flex-col w-3/4 space-y-4">
-            <div className="p-2 px-4 w-full bg-[#ffeaf4] rounded-lg">
-              <div className="inline-flex items-start justify-start space-x-3">
-                <span className="p-1 bg-white rounded-lg">
-                  <img
-                    src="/static/cwy.png"
-                    className="w-10 h-10 rounded-full"
-                    alt=""
-                  />
-                </span>
-                <div>
-                  <h6 className="text-2xl">Loan issuer - Chewy</h6>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3 text-[19px]">
-                <span className="flex items-center">
-                  Twitter
-                  <img
-                    src="/static/twitter-icon.svg"
-                    className="w-5 h-5 ml-2"
-                    alt=""
-                  />
-                </span>
-                <span className="flex items-center">
-                  Website
-                  <img
-                    src="/static/website-icon.svg"
-                    className="w-5 h-5 ml-2"
-                    alt=""
-                  />
-                </span>
+        <div className="flex mb-4 space-x-4">
+          <div className="p-2 w-3/4 flex flex-col justify-between px-4 bg-[#ffeaf4] rounded-lg">
+            <div className="inline-flex items-start justify-start space-x-3">
+              <span className="p-1 bg-white rounded-lg">
+                <img
+                  src="/static/cwy.png"
+                  className="w-10 h-10 rounded-full"
+                  alt=""
+                />
+              </span>
+              <div>
+                <h6 className="text-2xl">Loan issuer - Chewy</h6>
               </div>
             </div>
+            <div className="flex items-center space-x-3 text-[19px]">
+              <span className="flex items-center">
+                Twitter
+                <img
+                  src="/static/twitter-icon.svg"
+                  className="w-5 h-5 ml-2"
+                  alt=""
+                />
+              </span>
+              <span className="flex items-center">
+                Website
+                <img
+                  src="/static/website-icon.svg"
+                  className="w-5 h-5 ml-2"
+                  alt=""
+                />
+              </span>
+            </div>
+          </div>
+          <div className="w-2/4 p-2 px-4 bg-white border rounded-lg shadow-custom border-gray-50">
+            <h6 className="text-2xl">Loaning asset:</h6>
+            <span className="flex text-[19px] items-center tracking-wider">
+              USDC
+              <img
+                src="/static/usdc.svg"
+                className="w-4 h-4 ml-2 rounded-full"
+                alt=""
+                draggable={false}
+              />
+            </span>
+            <span className="text-[19px] text-gray-400">
+              Contract (Moonbeam)
+            </span>
+          </div>
+        </div>
+        <div className="flex space-x-4">
+          <div className="flex flex-col w-3/4 space-y-4">
             <div className="w-full p-2 px-4 bg-gray-100 rounded-lg">
               <h6 className="text-2xl">Deposit funds</h6>
               <p className="text-[19px] text-gray-500">
@@ -85,21 +102,6 @@ const LoanPage = () => {
             </div>
           </div>
           <div className="w-2/4 space-y-4">
-            <div className="p-2 px-4 bg-white border rounded-lg shadow-custom border-gray-50">
-              <h6 className="text-2xl">Loaning asset:</h6>
-              <span className="flex text-[19px] items-center tracking-wider">
-                USDC
-                <img
-                  src="/static/usdc.svg"
-                  className="w-4 h-4 ml-2 rounded-full"
-                  alt=""
-                  draggable={false}
-                />
-              </span>
-              <span className="text-[19px] text-gray-400">
-                Contract (Moonbeam)
-              </span>
-            </div>
             <div className="p-2 px-4 bg-[#ffeaf4] rounded-lg">
               <h6 className="text-2xl">Raise info</h6>
               <p className="text-[19px] text-gray-500">
