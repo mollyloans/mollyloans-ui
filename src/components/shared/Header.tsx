@@ -51,7 +51,7 @@ const Header = () => {
       </Link>
       <div
         className={clsx('hidden text-2xl md:space-x-6 md:block', {
-          'mr-24': !accountData?.address
+          'mr-24': !accountData?.address || switchNetwork
         })}
       >
         <Link href={HOME}>
