@@ -1,23 +1,24 @@
 export const IS_PRODUCTION = process.env.NODE_ENV === 'production'
-export const DEFAULT_CHAIN_ID = 1287
-export const DEFAULT_CHAIN_NAME = 'Moonbeam Alpha'
+export const DEFAULT_CHAIN_ID = 250
+export const DEFAULT_CHAIN_NAME = 'Fantom'
 
-const rpcUrl = process.env.NEXT_PUBLIC_RPC_URL as string
+// const rpcUrl = process.env.NEXT_PUBLIC_FANTORPC_URL as string
+const fantomRpcUrl = 'https://rpc.ftm.tools'
 
 export const SUPPORTED_NETWORKS = [
-  {
-    id: 1287,
-    name: 'Moonbeam Alpha',
-    rpcUrls: [rpcUrl],
-    blockExplorers: [
-      { name: 'Moonscan', url: 'https://moonbeam.moonscan.io/' }
-    ],
-    testnet: true
-  },
+  // {
+  //   id: 1287,
+  //   name: 'Moonbeam Alpha',
+  //   rpcUrls: [rpcUrl],
+  //   blockExplorers: [
+  //     { name: 'Moonscan', url: 'https://moonbeam.moonscan.io/' }
+  //   ],
+  //   testnet: true
+  // },
   {
     id: 250,
     name: 'Fantom',
-    rpcUrls: [rpcUrl],
+    rpcUrls: [fantomRpcUrl],
     blockExplorers: [{ name: 'FTMScan', url: 'https://ftmscan.com/' }],
     testnet: false
   }
