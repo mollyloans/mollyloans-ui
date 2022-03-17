@@ -80,7 +80,7 @@ const InfoMenu = () => {
       <Menu.Button className="inline-flex group justify-center w-full p-1.5 hover:border-black text-white primary-outline focus:outline-none">
         <HamburgurIcon />
       </Menu.Button>
-      <Menu.Items className="absolute right-0 mt-2 text-gray-500 origin-top-right bg-white shadow-sm primary-outline w-44 focus:outline-none">
+      <Menu.Items className="absolute text-[19px] right-0 mt-2 text-gray-500 origin-top-right bg-white shadow-sm primary-outline w-44 focus:outline-none">
         <div className="px-1 py-1">
           {LINKS.map((link, idx) => (
             <Menu.Item key={idx}>
