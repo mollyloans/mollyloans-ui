@@ -9,7 +9,7 @@ import {
   getNetworkLogo,
   shortenAddress
 } from 'src/utils/helpers'
-import { HOME, SUBMIT } from 'src/utils/paths'
+import { HOME, LIQUIDITY_MINING } from 'src/utils/paths'
 import { useAccount, useNetwork } from 'wagmi'
 
 import ChevronDown from '../icons/ChevronDown'
@@ -64,14 +64,14 @@ const Header = () => {
             Liquid loans
           </a>
         </Link>
-        <Link href={SUBMIT}>
+        <Link href={LIQUIDITY_MINING}>
           <a
             className={clsx('text-gray-400', {
-              'text-[#6eabff]': isActivePath(SUBMIT),
-              'hover:text-black': !isActivePath(SUBMIT)
+              'text-[#6eabff]': isActivePath(LIQUIDITY_MINING),
+              'hover:text-black': !isActivePath(LIQUIDITY_MINING)
             })}
           >
-            Submit to the program
+            Liquidity mining
           </a>
         </Link>
       </div>

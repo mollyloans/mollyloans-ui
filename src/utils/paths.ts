@@ -1,3 +1,3 @@
 export const HOME = '/'
 export const LOAN = '/loan'
-export const SUBMIT = '/submit'
+export const LIQUIDITY_MINING = '/liquidity-mining'

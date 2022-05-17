@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from 'src/components/shared/Layout'
 import { MOLLY_DISCORD_URL, MOLLY_TWITTER_URL } from 'src/utils/constants'
 
-const submit = () => {
+const liquidityMining = () => {
   return (
     <Layout>
       <div className="container max-w-2xl px-3 py-6 mx-auto md:px-0">
@@ -55,4 +55,4 @@ const submit = () => {
   )
 }
 
-export default submit
+export default liquidityMining

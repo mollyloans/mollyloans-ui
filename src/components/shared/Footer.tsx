@@ -31,7 +31,7 @@ const Footer = () => {
               <h6 className="text-[19px] font-semibold text-[#6c727f]">
                 Community
               </h6>
-              <ul className="text-[#9ca3ae] text-[17px]">
+              <ul className="text-[#9ca3ae] text-[19px]">
                 <li className="transition duration-200 ease-in-out hover:underline">
                   <Link href={MOLLY_TWITTER_URL}>
                     <a target="_blank" rel="noreferrer">
@@ -66,7 +66,7 @@ const Footer = () => {
               <h6 className="text-[19px] font-semibold text-[#6c727f]">
                 Development
               </h6>
-              <ul className="text-[#9ca3ae] text-[17px]">
+              <ul className="text-[#9ca3ae] text-[19px]">
                 <li className="transition duration-200 ease-in-out hover:underline">
                   <Link href={MOLLY_DOCS_URL}>
                     <a target="_blank" rel="noreferrer">
@@ -101,7 +101,7 @@ const Footer = () => {
               <h6 className="text-[19px] text-[#6c727f] font-semibold">
                 Governance
               </h6>
-              <ul className="text-[#9ca3ae] text-[17px]">
+              <ul className="text-[#9ca3ae] text-[19px]">
                 <li className="transition duration-200 ease-in-out hover:underline">
                   <Link href={MOLLY_ROADMAP_URL}>
                     <a target="_blank" rel="noreferrer">
@@ -131,19 +131,19 @@ const Footer = () => {
       <div className="w-full text-white bg-[#6EABFF] flex justify-between items-center py-2.5 p-2">
         <div className="flex items-center space-x-3">
           <a href={MOLLY_TWITTER_URL} target="_blank" rel="noreferrer">
-            <img src="static/footer/twitter.png" className="h-5" alt="" />
+            <img src="static/footer/twitter.svg" className="h-5" alt="" />
           </a>
           <a href={MOLLY_TELEGRAM_URL} target="_blank" rel="noreferrer">
-            <img src="static/footer/telegram.png" className="h-5" alt="" />
+            <img src="static/footer/telegram.svg" className="h-5" alt="" />
           </a>
           <a href={MOLLY_GITHUB_URL} target="_blank" rel="noreferrer">
-            <img src="static/footer/github.png" className="h-5" alt="" />
+            <img alt="" src="static/footer/github.svg" className="h-5" />
           </a>
           <a href={MOLLY_DISCORD_URL} target="_blank" rel="noreferrer">
-            <img src="static/footer/discord.png" className="h-5" alt="" />
+            <img alt="" src="static/footer/discord.svg" className="h-5" />
           </a>
           <a href={MOLLY_SUBSTACK_URL} target="_blank" rel="noreferrer">
-            <img src="static/footer/substack.png" className="h-5" alt="" />
+            <img alt="" src="static/footer/substack.svg" className="h-5" />
           </a>
         </div>
         <div>Molly Loans &copy; 2022</div>
