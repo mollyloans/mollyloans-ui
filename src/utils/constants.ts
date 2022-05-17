@@ -24,8 +24,17 @@ export const SUPPORTED_NETWORKS = [
   }
 ]
 
-export const MOLLY_DOCS_URL = 'https://docs.molly.loans'
-export const MOLLY_BLOG_URL = 'http://blog.molly.loans'
 export const MOLLY_TWITTER_URL = 'https://twitter.com/mollyloans'
-export const MOLLY_DISCORD_URL = 'https://discord.gg/JEQ2BXedzw'
+export const MOLLY_TELEGRAM_URL = 'https://twitter.com/mollyloans'
+export const MOLLY_DISCORD_URL = 'https://discord.gg/mollyloans'
+export const MOLLY_SUBSTACK_URL = 'https://mollyloans.substack.com'
+
+export const MOLLY_DOCS_URL = 'https://docs.molly.loans'
 export const MOLLY_GITHUB_URL = 'https://github.com/mollyloans'
+export const MOLLY_AUDITS_URL = 'https://docs.molly.loans/security/audits'
+export const MOLLY_BUG_BOUNTY_URL =
+  'https://docs.molly.loans/security/bug-bounty'
+
+export const MOLLY_ROADMAP_URL = 'https://docs.molly.loans/governance/roadmap'
+export const MOLLY_FORUM_URL = 'https://forum.molly.loans'
+export const MOLLY_SNAPSHOT_URL = 'https://snapshot.molly.loans'
