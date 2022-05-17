@@ -2,10 +2,10 @@ import { Menu } from '@headlessui/react'
 import Link from 'next/link'
 import React from 'react'
 import {
-  MOLLY_BLOG_URL,
   MOLLY_DISCORD_URL,
   MOLLY_DOCS_URL,
   MOLLY_GITHUB_URL,
+  MOLLY_SUBSTACK_URL,
   MOLLY_TWITTER_URL
 } from 'src/utils/constants'
 
@@ -26,7 +26,7 @@ const LINKS = [
   },
   {
     name: 'Blog',
-    href: MOLLY_BLOG_URL,
+    href: MOLLY_SUBSTACK_URL,
     icon: (
       <img
         src="/static/menu/blog.svg"
