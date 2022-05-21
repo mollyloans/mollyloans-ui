@@ -28,9 +28,7 @@ const Footer = () => {
               />
             </div>
             <div className="flex flex-col justify-start space-y-2">
-              <h6 className="text-[19px] font-semibold text-[#6c727f]">
-                Community
-              </h6>
+              <h6 className="text-[19px] text-[#6c727f]">Community</h6>
               <ul className="text-[#9ca3ae] text-[19px]">
                 <li className="transition duration-200 ease-in-out hover:underline">
                   <Link href={MOLLY_TWITTER_URL}>
@@ -63,9 +61,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="flex flex-col justify-start space-y-2">
-              <h6 className="text-[19px] font-semibold text-[#6c727f]">
-                Development
-              </h6>
+              <h6 className="text-[19px] text-[#6c727f]">Development</h6>
               <ul className="text-[#9ca3ae] text-[19px]">
                 <li className="transition duration-200 ease-in-out hover:underline">
                   <Link href={MOLLY_DOCS_URL}>
@@ -98,9 +94,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="flex flex-col justify-start space-y-2">
-              <h6 className="text-[19px] text-[#6c727f] font-semibold">
-                Governance
-              </h6>
+              <h6 className="text-[19px] text-[#6c727f]">Governance</h6>
               <ul className="text-[#9ca3ae] text-[19px]">
                 <li className="transition duration-200 ease-in-out hover:underline">
                   <Link href={MOLLY_ROADMAP_URL}>
