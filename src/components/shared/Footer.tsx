@@ -18,7 +18,7 @@ const Footer = () => {
   return (
     <div>
       <div className="py-10 bg-gray-100">
-        <div className="container max-w-3xl mx-auto">
+        <div className="container max-w-2xl mx-auto">
           <div className="flex items-start justify-between">
             <div className="flex flex-col justify-center">
               <img
