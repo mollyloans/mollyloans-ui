@@ -122,7 +122,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="w-full text-white bg-[#6EABFF] flex justify-between items-center py-2.5 p-2">
+      <div className="w-full p-3 text-white bg-[#6EABFF] flex justify-between items-center py-2.5 md:px-5">
         <div className="flex items-center space-x-3">
           <a href={MOLLY_TWITTER_URL} target="_blank" rel="noreferrer">
             <img src="static/footer/twitter.svg" className="h-5" alt="" />

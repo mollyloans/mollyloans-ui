@@ -24,14 +24,14 @@ const Liquidity = () => {
       </div>
       <div className="flex items-center p-1 pl-2 pr-4 space-x-6 bg-gray-100">
         <table className="w-full py-1">
-          <thead className="text-sm text-gray-400 border-b">
-            <th className="text-left">Balance</th>
-            <th className="text-right">Staked</th>
-            <th className="text-right">Pool TVL</th>
-            <th className="text-right">Est. APR</th>
-            <th className="text-right">Earned rewards</th>
+          <thead className="text-sm !font-normal text-gray-400 border-b">
+            <td className="text-left">Balance</td>
+            <td className="text-right">Staked</td>
+            <td className="text-right">Pool TVL</td>
+            <td className="text-right">Est. APR</td>
+            <td className="text-right">Earned rewards</td>
           </thead>
-          <tbody>
+          <tbody className="text-[#6c727f]">
             <td className="text-left">0</td>
             <td className="text-right">0</td>
             <td className="text-right">$45k</td>
