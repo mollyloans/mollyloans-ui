@@ -77,7 +77,7 @@ const LINKS = [
 const InfoMenu = () => {
   return (
     <Menu as="div" className="relative inline-block text-left">
-      <Menu.Button className="inline-flex group justify-center w-full p-1.5 hover:border-black text-white primary-outline focus:outline-none">
+      <Menu.Button className="inline-flex group justify-center transition ease-in-out duration-200 w-full p-1.5 hover:border-black text-white primary-outline focus:outline-none">
         <HamburgurIcon />
       </Menu.Button>
       <Menu.Items className="absolute text-[19px] right-0 mt-2 text-gray-500 origin-top-right bg-white shadow-sm primary-outline w-44 focus:outline-none">

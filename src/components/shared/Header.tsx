@@ -107,7 +107,7 @@ const Header = () => {
               : setShowWalletModal(true)
           }
           className={clsx(
-            'inline-flex ml-2 items-center primary-outline justify-between px-2 py-1',
+            'inline-flex ml-2 hover:!border-black transition ease-in-out duration-200 items-center primary-outline justify-between px-2 py-1',
             {
               'bg-red-300 !border-red-300':
                 network.chain?.unsupported && switchNetwork
